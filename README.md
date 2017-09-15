@@ -16,17 +16,17 @@ myVid=document.getElementById("video1");
 两个方法：
 1）每次视频播放完毕时调用的方法
 myVid.onended = function() 
-			{	
-			    console.log("音频已播放完成");
-//				myVid.setAttribute('loop','true');//loop属性一定不要加，如果给video给了loop，那么无论循环多少次就是相当于只播放完毕了一次。
-			    playVid()
-			};
+	{	
+	 console.log("音频已播放完成");
+//	myVid.setAttribute('loop','true');//loop属性一定不要加，如果给video给了loop，那么无论循环多少次就是相当于只播放完毕了一次。
+	playVid()
+	};
 2）播放视频函数，并且统计播放次数
 var time=0;
     function playVid(){
-				  time++;
-			    console.log("以播放"+time+"次");
-		  		myVideo.play();
+	 time++;
+	console.log("以播放"+time+"次");
+	myVideo.play();
 }
 
 ---------
