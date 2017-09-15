@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <style type="text/css">
+    	.box{
+    		width: 100px;
+    		height: 100px;
+    		background: red;
+    		display: none;
+    		position: absolute;
+    		left: 0;
+    		top: 0;
+    	}
+    </style>
+	<body> 
+		<video id="video1" controls="controls"  autoplay='autoplay' width="100%">
+		  <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+		  Your browser does not support HTML5 video.
+		</video>
+		<div class="box"></div>
+		<script>
+			myVid=document.getElementById("video1");
+			myVid.onended = function() 
+			{
+			    console.log("音频已播放完成");
+			    console.log("111111");
+				myVid.setAttribute('loop','true');
+			    playVid()
+			};
+			var myVideo=document.getElementById("video1");
+			function playVid(){
+		  		myVideo.play();
+		  	}
+		</script> 
+	
+	</body> 
+</html>
